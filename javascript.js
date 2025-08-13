@@ -167,12 +167,19 @@ function cargarproductos() {
         parrafo.id = "boxproducto"
         parrafo.innerHTML = `
                     <h2 id="nombreproducto">${producto.nombre}</h2>
-                    <img src="" alt="" id="${producto.imagen}">
+                    <img src="${producto.imagen}" alt="" id="${producto.imagen}">
                     <h3 id="precioproducto">$${producto.precio}</h3>
-                    <button id="btncomprar">Ver</button>
+                    <button id="btncomprar" onclick="verdetalle(${producto.id})">Ver</button>
         `
         document.getElementById("boxproductos").appendChild(parrafo)
     }
 }
 
 cargarproductos()
+
+function verdetalle(id) {
+  let productoseleccionado = productos.find(producto => producto.id == id)
+  let productojson = JSON.stringify(productoseleccionado)
+  localStorage.setItem("detalle", productojson)
+  window.location.href = "detalle.html"
+}
