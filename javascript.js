@@ -169,7 +169,7 @@ function cargarproductos() {
                     <h2 id="nombreproducto">${producto.nombre}</h2>
                     <img src="" alt="" id="${producto.imagen}">
                     <h3 id="precioproducto">$${producto.precio}</h3>
-                    <button id="btncomprar">Comprar</button>
+                    <button id="btncomprar">Ver</button>
         `
         document.getElementById("boxproductos").appendChild(parrafo)
     }
