@@ -41,7 +41,20 @@ function restarproducto() {
 
 function agregarcarrito() {
     if (contador > 0) {
-        let productojson = JSON.stringify(productoseleccionado)
+        let carrito = JSON.parse(localStorage.getItem("carrito"))
+        if (carrito === null) {
+            carrito =[]
+        }
+        productonuevo = {
+            id: productoseleccionado.id,
+            nombre:productoseleccionado.nombre,
+            imagen: productoseleccionado.imagen,
+            cantidad: contador,
+            precio: productoseleccionado.precio
+        }
+        carrito.push(productonuevo)
+
+        let productojson = JSON.stringify(carrito)
         localStorage.setItem("carrito", productojson)
         window.location.href = "carrito.html"
     }else{
