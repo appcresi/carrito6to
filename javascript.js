@@ -4,7 +4,7 @@ const productos = [
     nombre: "Refrigerador Samsung RF28R7351SG",
     descripcion: "Refrigerador de 4 puertas con dispensador de agua y hielo, tecnología Twin Cooling Plus, capacidad 28 pies cúbicos",
     precio: 1299.99,
-    imagen: "https://images.samsung.com/is/image/samsung/refrigerador-rf28r7351sg",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 15
   },
   {
@@ -12,7 +12,7 @@ const productos = [
     nombre: "Lavadora LG WM3900HWA",
     descripcion: "Lavadora de carga frontal con capacidad de 4.5 pies cúbicos, tecnología TurboWash y WiFi integrado",
     precio: 849.99,
-    imagen: "https://images.lg.com/lavadora-wm3900hwa",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 23
   },
   {
@@ -20,7 +20,7 @@ const productos = [
     nombre: "Microondas Panasonic NN-SN966S",
     descripcion: "Microondas de acero inoxidable con tecnología inverter, 2.2 pies cúbicos, 1250W de potencia",
     precio: 189.99,
-    imagen: "https://images.panasonic.com/microondas-nn-sn966s",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 45
   },
   {
@@ -28,7 +28,7 @@ const productos = [
     nombre: "Lavavajillas Bosch SHPM88Z75N",
     descripcion: "Lavavajillas empotrable ultra silencioso con tercera bandeja, tecnología PrecisionWash",
     precio: 1199.99,
-    imagen: "https://images.bosch.com/lavavajillas-shpm88z75n",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 12
   },
   {
@@ -36,7 +36,7 @@ const productos = [
     nombre: "Aspiradora Dyson V15 Detect",
     descripcion: "Aspiradora inalámbrica con detección láser de partículas, motor Hyperdymium y hasta 60 min de autonomía",
     precio: 749.99,
-    imagen: "https://images.dyson.com/aspiradora-v15-detect",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 8
   },
   {
@@ -44,7 +44,7 @@ const productos = [
     nombre: "Aire Acondicionado Carrier 53WCE12",
     descripcion: "Aire acondicionado de ventana 12,000 BTU con control remoto y filtro antimicrobiano",
     precio: 449.99,
-    imagen: "https://images.carrier.com/aire-53wce12",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 19
   },
   {
@@ -52,7 +52,7 @@ const productos = [
     nombre: "Estufa Whirlpool WFG975H0HZ",
     descripcion: "Estufa de gas de acero inoxidable con 5 quemadores, horno de convección y parrilla integrada",
     precio: 1599.99,
-    imagen: "https://images.whirlpool.com/estufa-wfg975h0hz",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 6
   },
   {
@@ -60,7 +60,7 @@ const productos = [
     nombre: "Secadora Electrolux EFME627UTT",
     descripcion: "Secadora eléctrica de 8.0 pies cúbicos con sensor de humedad y tecnología Perfect Steam",
     precio: 899.99,
-    imagen: "https://images.electrolux.com/secadora-efme627utt",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 14
   },
   {
@@ -68,7 +68,7 @@ const productos = [
     nombre: "Cafetera Keurig K-Elite",
     descripcion: "Cafetera de cápsulas con 5 tamaños de taza, depósito de 75 oz y función de café helado",
     precio: 169.99,
-    imagen: "https://images.keurig.com/cafetera-k-elite",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 32
   },
   {
@@ -76,7 +76,7 @@ const productos = [
     nombre: "Licuadora Vitamix A3500",
     descripcion: "Licuadora de alta potencia con pantalla táctil, tecnología Self-Detect y conectividad inalámbrica",
     precio: 549.99,
-    imagen: "https://images.vitamix.com/licuadora-a3500",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 11
   },
   {
@@ -84,7 +84,7 @@ const productos = [
     nombre: "Tostadora Breville BOV900BSS",
     descripcion: "Horno tostador inteligente con 13 funciones preestablecidas, pantalla LCD y interior de acero inoxidable",
     precio: 299.99,
-    imagen: "https://images.breville.com/tostadora-bov900bss",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 27
   },
   {
@@ -92,7 +92,7 @@ const productos = [
     nombre: "Plancha Black+Decker D3030",
     descripcion: "Plancha de vapor digital con suela antiadherente, apagado automático y tanque de 350ml",
     precio: 79.99,
-    imagen: "https://images.blackdecker.com/plancha-d3030",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 38
   },
   {
@@ -100,7 +100,7 @@ const productos = [
     nombre: "Ventilador Honeywell HYF290B",
     descripcion: "Ventilador de torre oscilante con control remoto, temporizador y 3 velocidades",
     precio: 129.99,
-    imagen: "https://images.honeywell.com/ventilador-hyf290b",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 22
   },
   {
@@ -108,7 +108,7 @@ const productos = [
     nombre: "Purificador de Aire Levoit Core 300",
     descripcion: "Purificador de aire HEPA para habitaciones hasta 215 pies cuadrados, ultra silencioso",
     precio: 99.99,
-    imagen: "https://images.levoit.com/purificador-core300",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 41
   },
   {
@@ -116,7 +116,7 @@ const productos = [
     nombre: "Freidora de Aire Ninja AF101",
     descripcion: "Freidora de aire de 4 cuartos con 4 funciones programables y cesta antiadherente",
     precio: 99.99,
-    imagen: "https://images.ninjakitchen.com/freidora-af101",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 29
   },
   {
@@ -124,7 +124,7 @@ const productos = [
     nombre: "Batidora KitchenAid KSM150PSER",
     descripcion: "Batidora de pie artesanal de 5 cuartos con 10 velocidades y tazón de acero inoxidable",
     precio: 379.99,
-    imagen: "https://images.kitchenaid.com/batidora-ksm150pser",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 16
   },
   {
@@ -132,7 +132,7 @@ const productos = [
     nombre: "Calentador de Agua Rheem RTEX-13",
     descripcion: "Calentador de agua eléctrico sin tanque de 13kW para toda la casa con termostato digital",
     precio: 449.99,
-    imagen: "https://images.rheem.com/calentador-rtex13",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 9
   },
   {
@@ -140,7 +140,7 @@ const productos = [
     nombre: "Extractor de Jugos Omega J8006HDS",
     descripcion: "Extractor de jugos masticador con motor de baja velocidad y 15 años de garantía",
     precio: 299.99,
-    imagen: "https://images.omega.com/extractor-j8006hds",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 13
   },
   {
@@ -148,7 +148,7 @@ const productos = [
     nombre: "Humidificador Crane EE-5301W",
     descripcion: "Humidificador ultrasónico de vapor frío con tanque de 2.3 litros y funcionamiento silencioso",
     precio: 59.99,
-    imagen: "https://images.crane.com/humidificador-ee5301w",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 35
   },
   {
@@ -156,7 +156,7 @@ const productos = [
     nombre: "Robot de Cocina Instant Pot Duo 7-en-1",
     descripcion: "Olla de presión eléctrica multifuncional de 6 cuartos con 13 programas inteligentes",
     precio: 99.99,
-    imagen: "https://images.instantpot.com/robot-duo-7en1",
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 24
   }
 ];
