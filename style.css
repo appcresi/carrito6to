@@ -461,3 +461,166 @@ td:nth-child(6) button:hover {
   top: -20px;
   right: -10px;
 }
+
+:root{
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --accent: #6c63ff;
+  --accent-2: #4f46e5;
+  --muted: #6b7280;
+  --danger: #ef4444;
+  --radius: 12px;
+  --gap: 14px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html,body{
+  height:100%;
+  margin:0;
+  background: linear-gradient(180deg, #f7f9ff 0%, var(--bg) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-size:16px;
+}
+
+#login{
+  width: min(480px, 94%);
+  margin: clamp(24px, 6vh, 80px) auto;
+  padding: 28px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(17,24,39,0.06);
+  display: grid;
+  gap: var(--gap);
+  align-items: center;
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+/* Título opcional (si agregas un h2 antes del form) */
+#login h2{
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+/* Labels */
+label{
+  display:block;
+  font-size: .95rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+  user-select: none;
+}
+
+/* Inputs base */
+#login input[type="text"],
+#login input[type="password"]{
+  width:100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(15,23,42,0.08);
+  background: #fff;
+  font-size: 1rem;
+  color: #0f172a;
+  transition: box-shadow .15s ease, border-color .15s ease, transform .06s ease;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* Focus states accesibles */
+#login input[type="text"]:focus,
+#login input[type="password"]:focus{
+  box-shadow: 0 6px 20px rgba(79,70,229,0.12);
+  border-color: var(--accent-2);
+  transform: translateY(-1px);
+}
+
+/* Estilos para el checkbox y su contenedor */
+.checkbox-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: .95rem;
+}
+#inpver{
+  width:18px;
+  height:18px;
+  accent-color: var(--accent-2); /* navegadores que lo soporten */
+  cursor: pointer;
+}
+
+/* Contenedor de botones */
+.form-actions{
+  display:flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top:6px;
+  flex-wrap:wrap;
+}
+
+/* Botones */
+#login button{
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: transform .08s ease, box-shadow .12s ease, opacity .12s ease;
+  min-width: 120px;
+}
+
+/* Botón principal Crear Cuenta (resaltado) */
+#btncrearcuenta{
+  background: linear-gradient(180deg,var(--accent),var(--accent-2));
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(79,70,229,0.18);
+}
+#btncrearcuenta:hover{ transform: translateY(-2px); }
+
+/* Botón secundario Ingresar */
+#btningresar{
+  background: transparent;
+  color: var(--accent-2);
+  border: 1px solid rgba(79,70,229,0.12);
+}
+#btningresar:hover{
+  background: rgba(79,70,229,0.06);
+  transform: translateY(-1px);
+}
+
+/* Estilos para estados inválidos si usas validación */
+#login input:invalid{
+  border-color: rgba(239,68,68,0.18);
+  box-shadow: 0 6px 18px rgba(239,68,68,0.06);
+}
+
+/* Mensaje de error (si lo agregas con JS) */
+.form-error{
+  color: var(--danger);
+  font-size: .9rem;
+  margin-top: -4px;
+}
+
+#lblconfirmar {
+  display: none;
+}
+#password2{
+  display: none;
+}
+
+
+/* Responsive: en móviles hacer botones full width */
+@media (max-width: 420px){
+  .form-actions{
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+  #login button{ min-width: 100%; }
+}
