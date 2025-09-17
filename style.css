@@ -445,3 +445,19 @@ td:nth-child(6) button {
 td:nth-child(6) button:hover {
   background-color: #d32f2f;
 }
+
+#totalcompra{
+  text-align: right;
+  width: 90%;
+}
+
+#totalproducto{
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  top: -20px;
+  right: -10px;
+}

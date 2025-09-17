@@ -161,6 +161,12 @@ const productos = [
   }
 ];
 
+function actualizar() {
+   let carrito = localStorage.getItem("totalproductos")
+   document.getElementById("totalproducto").innerHTML = carrito
+}
+actualizar()
+
 function cargarproductos() {
     for (let producto of productos) {
         let parrafo = document.createElement("div")
@@ -173,6 +179,7 @@ function cargarproductos() {
         `
         document.getElementById("boxproductos").appendChild(parrafo)
     }
+    
 }
 
 cargarproductos()
