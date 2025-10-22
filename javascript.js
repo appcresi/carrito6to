@@ -1,4 +1,4 @@
-const productos = [
+/*const productos = [
   {
     id: 1,
     nombre: "Refrigerador Samsung RF28R7351SG",
@@ -159,7 +159,50 @@ const productos = [
     imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
     stock: 24
   }
-];
+];*/
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDtr6LfpEcBURf4TfYPlwEjS5w08K87Sdw",
+  authDomain: "erbase-f5b9c.firebaseapp.com",
+  projectId: "erbase-f5b9c",
+  storageBucket: "erbase-f5b9c.firebasestorage.app",
+  messagingSenderId: "140082194129",
+  appId: "1:140082194129:web:d72c2e5bcc3cec1fe747f0"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+let productos = [];
+
+async function cargarproductos() {
+    const querySnapshot = await getDocs(collection(db, "Productos"));
+    productos = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+   
+    for (let producto of productos) {
+        let parrafo = document.createElement("div");
+        parrafo.id = "boxproducto";
+        parrafo.innerHTML = `<h2 id="nombreProducto">${producto.nombre}</h2>
+                            <img src="${producto.imagen}" alt="" id="imagenProducto">
+                            <h3 id="precioProducto">$${producto.precio}</h3>
+                            <button class="btnVer" id="btncomprar" onclick="verdetalle('${producto.id}')">Ver</button>`;
+        document.getElementById("boxproductos").appendChild(parrafo);
+    }
+}
+
+cargarproductos();
+
+function verdetalle(idProducto) {
+    let detalleProducto = productos.find(producto => producto.id === parseInt(idProducto))
+    let detalleJSON = JSON.stringify(detalleProducto);
+    localStorage.setItem("detalle", detalleJSON);
+    window.location.href = "detalle.html";
+}
+
+window.verdetalle = verdetalle;
 
 function actualizar() {
    let carrito = localStorage.getItem("totalproductos")
@@ -167,26 +210,3 @@ function actualizar() {
 }
 actualizar()
 
-function cargarproductos() {
-    for (let producto of productos) {
-        let parrafo = document.createElement("div")
-        parrafo.id = "boxproducto"
-        parrafo.innerHTML = `
-                    <h2 id="nombreproducto">${producto.nombre}</h2>
-                    <img src="${producto.imagen}" alt="" id="${producto.imagen}">
-                    <h3 id="precioproducto">$${producto.precio}</h3>
-                    <button id="btncomprar" onclick="verdetalle(${producto.id})">Ver</button>
-        `
-        document.getElementById("boxproductos").appendChild(parrafo)
-    }
-    
-}
-
-cargarproductos()
-
-function verdetalle(id) {
-  let productoseleccionado = productos.find(producto => producto.id == id)
-  let productojson = JSON.stringify(productoseleccionado)
-  localStorage.setItem("detalle", productojson)
-  window.location.href = "detalle.html"
-}
